@@ -1,0 +1,57 @@
+ICEWS14s:
+  h_dim: 200
+  out_dim: 200
+  encoder: 'regcn'
+  decoder: 'rgat_r1'
+  feat_drop: 0.0
+  attn_drop: 0.0
+  a_layer_num: 2
+  d_layer_num: 3
+  max_length: 10
+  filter: False
+  low_memory: True
+  last: True
+  ori: False
+ICEWS18:
+  h_dim: 200
+  out_dim: 200
+  encoder: 'regcn'
+  decoder: 'rgat_r1'
+  feat_drop: 0.0
+  attn_drop: 0.0
+  a_layer_num: 2
+  d_layer_num: 2
+  max_length: 10
+  filter: False
+  low_memory: True
+  last: True
+  ori: False
+ICEWS05-15:
+  h_dim: 200
+  out_dim: 200
+  encoder: 'regcn'
+  decoder: 'rgat_r1'
+  feat_drop: 0
+  attn_drop: 0
+  a_layer_num: 2
+  d_layer_num: 3
+  max_length: 10
+  filter: False
+  low_memory: True
+  ori: False
+  last: False
+GDELT:
+  h_dim: 200
+  out_dim: 200
+  encoder: 'regcn'
+  decoder: 'rgat_r1'
+  feat_drop: 0
+  attn_drop: 0
+  a_layer_num: 2
+  d_layer_num: 2
+  max_length: 5
+  filter: False
+  low_memory: True
+  last: True
+  ori: False
+
