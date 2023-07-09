@@ -1,12 +1,10 @@
 #!/user/bin/env/ bash
-nohup  python -u  new_main.py \
+nohup  python -u  main.py \
   --dataset='GDELT'\
   --relation-prediction \
-  --space=r \
   --gpu=0 \
-  --r_p \
-  --re \
-  --tk \
+  --short \
+  --long \
   --lr=0.001 \
   --fuse=gate \
   --r_fuse=gate \

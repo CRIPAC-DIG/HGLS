@@ -1,14 +1,12 @@
 #!/user/bin/env/ bash
-nohup  python -u  new_main.py \
+nohup  python -u  main.py \
   --dataset='ICEWS05-15'\
   --relation-prediction \
-  --space=r\
   --gpu=0 \
   --short \
   --long \
-  --r_p \
   --lr=0.001 \
-  --fuse=att \
+  --fuse=gate \
   --r_fuse=short \
   --record \
   --model_record \

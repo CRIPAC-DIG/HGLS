@@ -1,10 +1,8 @@
 #!/user/bin/env/ bash
-nohup  python -u  new_main.py \
+nohup  python -u  main.py \
   --dataset='ICEWS14s'\
   --relation-prediction \
-  --space=r\
   --gpu=1 \
-  --r_p \
   --long \
   --short \
   --lr=0.001 \
