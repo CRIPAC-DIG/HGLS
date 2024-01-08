@@ -36,13 +36,10 @@ class myFloder_new(Dataset):
 def collate_new(data, encoder='rgat', decoder='rgat'):
     data_list = {}
     data = data[0]
-    if encoder == 'rgat':
-        data_list['sub_e_graph'] = data[0][0]
-        data_list['pre_e_eid']  = data[1]['pre_e_eid']
-    if decoder in ['rgat','rgat_r']:
-        data_list['sub_d_graph'] = data[0][1]
-        data_list['pre_e_nid'] = data[1]['pre_e_nid']
-        data_list['pre_d_nid'] = data[1]['pre_d_nid']
+    data_list['sub_e_graph'] = data[0][0]
+    data_list['sub_d_graph'] = data[0][1]
+    data_list['pre_e_nid'] = data[1]['pre_e_nid']
+    data_list['pre_d_nid'] = data[1]['pre_d_nid']
     data_list['t'] = data[1]['t']
     data_list['triple'] = data[1]['triple']
     data_list['sample_list'] = data[1]['sample_list']
@@ -51,9 +48,6 @@ def collate_new(data, encoder='rgat', decoder='rgat'):
     data_list['t'] = data[1]['t']
     data_list['sample_unique'] = data[1]['sample_unique']
     data_list['time_unique'] = data[1]['time_unique']
-    data_list['all_list'] = data[1]['all_list']
-    data_list['all_time_list'] = data[1]['all_time_list']
-    data_list['all_length'] = data[1]['all_length']
     return data_list
 
 

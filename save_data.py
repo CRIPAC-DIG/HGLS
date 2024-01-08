@@ -45,14 +45,11 @@ if __name__ == '__main__':
     test_dataset = DataLoader(dataset=test_set, batch_size=1, collate_fn=co.collate_rel, shuffle=False, pin_memory=True,
                               num_workers=2)
 
-    train_path = 'data/' + '_' + args.data + '/'  + 'length_' + str(args.max_length) \
-                 + '_encoder_' + args.encoder + '_decoder_' + args.decoder + '_hop_' + str(args.k_hop) + '/train/'
-    val_path = 'data/' + '_' + args.data + '/' + 'length_' + str(args.max_length) \
-                + '_encoder_' + args.encoder + '_decoder_' + args.decoder + '_hop_' + str(args.k_hop) + '/val/'
-    test_path = 'data/' + '_' + args.data + '/' + 'length_' + str(args.max_length) \
-                + '_encoder_' + args.encoder + '_decoder_' + args.decoder + '_hop_' + str(args.k_hop) + '/test/'
+    train_path = 'data/' + '_' + args['dataset'] + '/train/'
+    valid_path = 'data/' + '_' + args['dataset'] + '/val/'
+    test_path = 'data/' + '_' + args['dataset'] + '/test/'
     mkdir(train_path)
-    mkdir(val_path)
+    mkdir(valid_path)
     mkdir(test_path)
     print('Start loading train set: ', datetime.datetime.now(), '=============================================')
     for i, train_data_list in enumerate(train_dataset):
@@ -60,7 +57,7 @@ if __name__ == '__main__':
                     [train_data_list.pop('sub_e_graph'), train_data_list.pop('sub_d_graph')], train_data_list)
     print('Start loading validation set: ', datetime.datetime.now(), '=============================================')
     for i, val_data_list in enumerate(val_dataset):
-        save_graphs(val_path + str(i) + '_' + 'bin',
+        save_graphs(valid_path + str(i) + '_' + 'bin',
                     [val_data_list.pop('sub_e_graph'), val_data_list.pop('sub_d_graph')], val_data_list)
     print('Start loading test set: ', datetime.datetime.now(), '=============================================')
     for i, test_data_list in enumerate(test_dataset):
