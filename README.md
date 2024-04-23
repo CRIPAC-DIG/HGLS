@@ -48,7 +48,7 @@ Please cite our paper if you use the code:
 }
 ```
 
-### Acknowledge
+## Acknowledge
 
 Some of our code is also referenced from RE-GCN: [https://github.com/Lee-zix/RE-GCN](https://github.com/Lee-zix/RE-GCN).
 
