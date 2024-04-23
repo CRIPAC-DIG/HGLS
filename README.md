@@ -1,20 +1,10 @@
 # HGLS
 
-This repository contains the code for the ACM Web Conference (WWW') 2023 paper titled "Learning Long- and short-term representations for Temporal Knowledge Graph Reasoning".
+<img src="hgls.png" alt="model" style="zoom: 50%;" />
 
-## Dependencies
+This repository contains the code for the ACM Web Conference (WWW') 2023 paper titled "[Learning Long- and short-term representations for Temporal Knowledge Graph Reasoning](https://dl.acm.org/doi/abs/10.1145/3543507.3583242)". 
 
-Make sure you have the following dependencies installed:
-
-- Python~=3.7
-- dgl~=0.9.1
-- torch~=1.12.1
-- numpy~=1.21.5
-- tqdm~=4.64.1
-- pandas~=1.3.5
-- scipy~=1.7.3
-
-## Usage 
+## Usage
 
 ### Generate data
 
@@ -33,7 +23,18 @@ The detailed commands can be found in `{dataset}.sh`. Some important hyper-param
 and ```short_config.yaml```.
 
 
-### Citation
+## Requirements
+
+Make sure you have the following dependencies installed:
+- Python~=3.7
+- dgl~=0.9.1
+- torch~=1.12.1
+- numpy~=1.21.5
+- tqdm~=4.64.1
+- pandas~=1.3.5
+- scipy~=1.7.3
+
+## Citation
 
 Please cite our paper if you use the code:
 
